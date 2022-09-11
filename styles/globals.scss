@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap";
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+svg {
+  width: 1.125em;
+}
+.text-shadow {
+  text-shadow: hsla(0, 0%, 0%, 0.75) 1px 1px 2px;
+}
+.endview > * {
+  cursor: default !important;
+}

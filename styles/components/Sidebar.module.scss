@@ -1,0 +1,48 @@
+@import "../variables";
+@import "~bootstrap/scss/bootstrap-utilities";
+
+.sidebar {
+  background-color: #000;
+  position: fixed;
+  width: 250px;
+  min-height: calc(100vh);
+  max-height: calc(100vh);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  overflow-x: hidden;
+  padding-top: 70px;
+  @media (min-width: 992px) {
+    padding-top: 2px;
+  }
+  a {
+    color: #eee;
+    padding: 3px;
+    @media (min-width: 992px) {
+      padding: 10px;
+    }
+    &:hover,
+    .active {
+      color: #ddd;
+      font-weight: bold;
+    }
+  }
+  .headers {
+    @extend .border-bottom, .border-light, .mx-1, .p-0, .text-white;
+  }
+}
+.slide {
+  &-leave {
+    width: 100%;
+  }
+  &-leave-to,
+  &-enter {
+    width: 0;
+  }
+  &-enter-to {
+    width: 250px;
+  }
+  &-enter-active,
+  &-leave-active {
+    transition: all 400ms ease-in-out;
+  }
+}
